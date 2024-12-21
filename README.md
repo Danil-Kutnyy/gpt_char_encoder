@@ -1,29 +1,60 @@
-Code here was not prepared for review or use. However, if you need to make sense of it for some reason, 
-I prepared a little guide, please contact me, I will be pleased to help.
+### Required Files
+Some additional files are required for this project. These files are too large to be uploaded to GitHub, so they are available on Google Drive:  
+**[Google Drive link](https://drive.google.com/drive/folders/1d6TmwmeeowA2HxZg83J0FIWYhyJZQPpB?usp=share_link)**  
 
-Email: Danil.kutny@gmail.com
+You will need to manually place the following files in their appropriate locations:
 
-Telegram: @DanilKutny
+1. **`tokenized_books.pkl`**  
+   - Tokenized versions of books.  
+   - Place this file in the **main folder**.
 
-Required files:
-Some additional files are required. This is dateset and its tokenized versions, they are too big to be uploaded to 
-GitHub, therefore they are available on google drive:
-https://drive.google.com/drive/folders/1d6TmwmeeowA2HxZg83J0FIWYhyJZQPpB?usp=share_link
-You need to place them manually, each 3 of them:
-1. **tokenized_books.pkl** - tokenized versions of books. Place in main folder
-2. **gutenberg/** - folder with dataset of books, place in main folder
-3. **tokenized_books_chunked.pkl** - these are chunked tokenized books, it is important for fine-tuning and testing on character-specific tasks. It should be placed inside /synthetic folder. 
+2. **`gutenberg/`**  
+   - Folder containing the dataset of books.  
+   - Place this folder in the **main folder**.
 
-Brief Guide:
-1. **/nano_gpt_model** - main file, that load dataset, tokenizer, create models and train them.
-2. **/plot** - will show results of pre-training languages modeling stage, same results as in the paper
-3. All **.pth** files are saved parameters of trained models and optimizers, if you wish to test already trained models
-4. **/synthetic** - contains additional codebase for character-level task fine-tuning. Include a separate character-level manipulation tasks and training on them + results.
-5. **/synthetic/synthetic_data** - creates dataset with character based manipulations
-6. **/synthetic/nano-gpt** - load such dataset and fine-tune models 
-7. **/synthetic/plot** - will show results of fine-tuning on those tasks, same results as in the paper
+3. **`tokenized_books_chunked.pkl`**  
+   - Chunked tokenized books. This is essential for fine-tuning and testing character-specific tasks.  
+   - Place this file inside the **`/synthetic`** folder.
 
-Additional note:
-Tokenizer is already trained as used part of dataset tokenized. But you can do it again 
-if you wish with tokenizer.train() method. Be careful as some texts in dataset contain rare characters like Ꞣ. 
-They are not worthy to be used for small tokenizer. In my settings such texts were the
+---
+
+### Brief Guide
+#### Main Folder
+1. **`/nano_gpt_model`**  
+   - This is the main file that:  
+     - Loads the dataset and tokenizer.  
+     - Creates the models.  
+     - Trains the models.
+
+2. **`/plot`**  
+   - Displays the results of the pre-training language modeling stage.  
+   - The results will be the same as reported in the paper.
+
+3. **`.pth` files**  
+   - These are saved parameters of trained models and optimizers.  
+   - Use them to test pre-trained models.
+
+#### Synthetic Folder
+1. **`/synthetic`**  
+   - Contains the additional codebase for fine-tuning on character-level tasks.  
+   - Includes separate tasks for character-level manipulations and their training.  
+   - Also contains scripts for evaluating results.
+
+2. **`/synthetic/synthetic_data`**  
+   - Creates datasets with character-based manipulations.
+
+3. **`/synthetic/nano-gpt`**  
+   - Loads datasets for character-based tasks.  
+   - Fine-tunes the models on these datasets.
+
+4. **`/synthetic/plot`**  
+   - Displays results of fine-tuning on character-based tasks.  
+   - The results will match those reported in the paper.
+
+---
+
+### Additional Notes
+- The tokenizer has already been trained as part of the dataset is tokenized. However, if needed, you can retrain the tokenizer using the **`tokenizer.train()`** method.  
+  **Caution:** Some texts in the dataset include rare characters, such as **Ꞣ**, which are not suitable for small tokenizers. In the original settings, such texts were excluded.  
+
+Let me know if you need further clarification or additional edits!
