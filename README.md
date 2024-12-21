@@ -2,6 +2,7 @@ Code here was not prepared for review or use. However, if you need to make sense
 I prepared a little guide, please contact me, I will be pleased to help.
 
 Email: Danil.kutny@gmail.com
+
 Telegram: @DanilKutny
 
 Required files:
@@ -14,13 +15,13 @@ You need to place them manually, each 3 of them:
 3. **tokenized_books_chunked.pkl** - these are chunked tokenized books, it is important for fine-tuning and testing on character-specific tasks. It should be placed inside /synthetic folder. 
 
 Brief Guide:
-**/nano_gpt_model** - main file, that load dataset, tokenizer, create models and train them.
-**/plot** - will show results of pre-training languages modeling stage, same results as in the paper
-All **.pth** files are saved parameters of trained models and optimizers, if you wish to test already trained models
-**/synthetic** - contains additional codebase for character-level task fine-tuning. Include a separate character-level manipulation tasks and training on them + results.
-**/synthetic/synthetic_data** - creates dataset with character based manipulations
-**/synthetic/nano-gpt** - load such dataset and fine-tune models 
-**/synthetic/plot** - will show results of fine-tuning on those tasks, same results as in the paper
+1. **/nano_gpt_model** - main file, that load dataset, tokenizer, create models and train them.
+2. **/plot** - will show results of pre-training languages modeling stage, same results as in the paper
+3. All **.pth** files are saved parameters of trained models and optimizers, if you wish to test already trained models
+4. **/synthetic** - contains additional codebase for character-level task fine-tuning. Include a separate character-level manipulation tasks and training on them + results.
+5. **/synthetic/synthetic_data** - creates dataset with character based manipulations
+6. **/synthetic/nano-gpt** - load such dataset and fine-tune models 
+7. **/synthetic/plot** - will show results of fine-tuning on those tasks, same results as in the paper
 
 Additional note:
 Tokenizer is already trained as used part of dataset tokenized. But you can do it again 
