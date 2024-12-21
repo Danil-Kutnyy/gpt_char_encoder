@@ -1,5 +1,6 @@
 Code here was not prepared for review or use. However, if you need to make sense of it for some reason, 
 I prepared a little guide, please contact me, I will be pleased to help.
+
 Email: Danil.kutny@gmail.com
 Telegram: @DanilKutny
 
