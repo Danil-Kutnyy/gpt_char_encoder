@@ -1,3 +1,12 @@
+The code here was not prepared for review or general use. However, if you need assistance understanding it, I have prepared a brief guide. Please feel free to contact me—I will be happy to help:
+
+
+Email: Danil.kutny@gmail.com
+
+
+Telegram: @DanilKutny
+
+
 ### Required Files
 Some additional files are required for this project. These files are too large to be uploaded to GitHub, so they are available on Google Drive:  
 **[Google Drive link](https://drive.google.com/drive/folders/1d6TmwmeeowA2HxZg83J0FIWYhyJZQPpB?usp=share_link)**  
@@ -56,5 +65,3 @@ You will need to manually place the following files in their appropriate locatio
 ### Additional Notes
 - The tokenizer has already been trained as part of the dataset is tokenized. However, if needed, you can retrain the tokenizer using the **`tokenizer.train()`** method.  
   **Caution:** Some texts in the dataset include rare characters, such as **Ꞣ**, which are not suitable for small tokenizers. In the original settings, such texts were excluded.  
-
-Let me know if you need further clarification or additional edits!
